@@ -6,7 +6,8 @@
 
 
 body {
-    font-size: larger;
+    font-family: 'Alef', sans-serif;
+    // font-size: larger;
     margin: 0;
     color: $clr-primary;
     background-color: $clr-white;
@@ -16,6 +17,7 @@ body {
 
 .eng {
     direction: ltr;
+    font-family: 'Lora', serif;
 }
 
 h1,
@@ -26,8 +28,7 @@ h5,
 h6 {
     text-align: center;
     margin: .5em 0 .5em;
-    // font-family: 'Edu VIC WA NT Beginner', cursive;
-    font-family: 'Times New Roman', Times, serif;
+    // font-weight: 100;
 }
 
 h1 {
@@ -120,11 +121,15 @@ input:focus {
 
 .landing {
     position: relative;
-    height: 100vh;
+    height: 60vh;
 
     img {
-        height: 100%;
+        position: absolute;
+        top: -450px;
+        height: 900px;
         width: 100vw;
+        opacity: .9;
+        filter: brightness(.8);
     }
 
     h1 {
@@ -138,9 +143,14 @@ input:focus {
 }
 
 .top-card {
-    max-width: 720px;
+    // max-width: 720px;
     margin: auto;
     margin-bottom: 4rem;
+
+    p {
+        max-width: 900px;
+        margin: auto;
+    }
 }
 
 .card-container {

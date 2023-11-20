@@ -1,12 +1,11 @@
 import { SideBar } from "../cmps/SideBar";
-import hero from '../assets/img/sky_hero.jpg'
 
 export function Hebrew() {
 
     return (
         <>
             <div className='landing'>
-                <img src={hero} alt="" />
+                <img src="https://res.cloudinary.com/dollaguij/image/upload/v1700480190/landing1_u0pdxj.png" alt="" />
                 <h1>התכלת בימי המשנה והגמרא</h1>
             </div>
             <div className="top-card">

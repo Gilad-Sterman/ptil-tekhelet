@@ -1,4 +1,3 @@
-import hero from '../assets/img/sky_hero.jpg'
 import { SideBarEng } from "../cmps/SideBarEng";
 
 export function English() {
@@ -6,13 +5,15 @@ export function English() {
     return (
         <>
             <div className='landing eng'>
-                <img src={hero} alt="" />
+                <img src="https://res.cloudinary.com/dollaguij/image/upload/v1700480190/landing1_u0pdxj.png" alt="" />
                 <h1>The Tekhelet in the time of the
                     <br />
                     Mishna and Gmara</h1>
             </div>
             <div className="top-card eng">
-                <h1>The background for the period</h1>
+                <h1>The background for
+                    <br />
+                    the period</h1>
                 <p className="eng">The Tekhelet was a part of life for the people of Israel even during the Mishna and Talmud period, and our late sages expand on the description of the snail that was the source of the Tekhelet, the ways to catch it, the ways of producing the Tekhelet, the method of dyeing with Tekhelet, the rules for tying the Tzitzit with Tekhelet and white strings, how to distinguish between an original Tekhelet color and a fake color that originates from The plant, etc. Findings and texts from the period teach more about the Tekhelet in the Jewish world, and also on the fate of Tekhelet in the days after the destruction of the Temple and the exile of the Jewish people.</p>
             </div>
             <main className='main-layout eng'>
