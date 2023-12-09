@@ -6,7 +6,7 @@
 
 
 body {
-    font-family: 'Alef', sans-serif;
+    font-family: 'Noto Sans Hebrew', sans-serif;
     // font-size: larger;
     margin: 0;
     color: $clr-primary;
@@ -17,7 +17,7 @@ body {
 
 .eng {
     direction: ltr;
-    font-family: 'Lora', serif;
+    font-family: 'Jost', sans-serif;
 }
 
 h1,
@@ -33,12 +33,22 @@ h6 {
 
 h1 {
     font-size: 4rem;
+
+    @media (max-width: 500px) {
+        font-size: 2rem;
+    }
 }
 
 p {
     font-size: 30px;
     margin: 0 0 1em;
     line-height: 40px;
+
+    @media (max-width: 500px) {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        padding-inline: 1rem;
+    }
 }
 
 a {
@@ -140,6 +150,15 @@ input:focus {
         left: 50%;
         transform: translate(-50%, -50%);
     }
+
+    @media (max-width: 500px) {
+        height: 40vh;
+
+        img {
+            top: 0;
+            height: 90%;
+        }
+    }
 }
 
 .top-card {
@@ -193,6 +212,13 @@ input:focus {
             border-radius: 1rem;
             background-color: $clr-primary;
             box-shadow: -10px 10px 20px 0px rgba(6.999999999999995, 40.00000000000005, 61, 0.30196078431372547);
+
+
+            @media (max-width: 500px) {
+                font-size: 20px;
+                padding: 1rem;
+                min-width: max-content;
+            }
         }
 
         .side-title.eng {
@@ -202,6 +228,18 @@ input:focus {
 
         .side-title.heb {
             right: -15%;
+        }
+
+        @media (max-width: 500px) {
+            margin: 1rem;
+
+            .side-title.heb {
+                right: 0;
+            }
+
+            .side-title.eng {
+                left: 0;
+            }
         }
     }
 
@@ -221,6 +259,11 @@ input:focus {
 
         .italic {
             font-style: italic;
+        }
+
+        @media (max-width: 500px) {
+            font-size: 1rem;
+            margin: 1rem;
         }
     }
 }

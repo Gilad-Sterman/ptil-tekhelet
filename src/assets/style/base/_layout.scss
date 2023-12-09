@@ -22,6 +22,11 @@
     // @include for-wide-layout {
     //     @include layoutGTC($break-wide);
     // }
+
+    @media (max-width: 500px) {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 
