@@ -4,6 +4,11 @@
 @import 'setup/mixins';
 @import 'setup/functions';
 
+@font-face {
+    font-family: 'Bazelt';
+    src: url("/fonts/Basalt/Basalt-Regular.otf");
+}
+
 // BASICS
 @import 'base/helpers';
 @import 'base/base';
@@ -12,4 +17,6 @@
 // COMPONENTS
 @import 'cmps/AppHeader';
 @import 'cmps/SideBar';
+@import 'cmps/ScrollDown';
+@import 'cmps/ScrollDownMain';
 // PAGES

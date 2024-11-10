@@ -1,3 +1,9 @@
+// @font-face {
+//     font-family: 'Bazelt';
+//     src: local('Basalt'),
+//         url('../../../fonts/Basalt/Basalt-Regular.otf');
+// }
+
 * {
     box-sizing: border-box;
     direction: rtl;
@@ -6,7 +12,7 @@
 
 
 body {
-    font-family: 'Noto Sans Hebrew', sans-serif;
+    font-family: 'Bazelt';
     // font-size: larger;
     margin: 0;
     color: $clr-primary;
@@ -130,13 +136,14 @@ input:focus {
 }
 
 .landing {
-    position: relative;
-    height: 60vh;
+    position: absolute;
+    top: 0;
+    // height: 100vh;
 
     img {
-        position: absolute;
-        top: -450px;
-        height: 900px;
+        // position: absolute;
+        // top: -450px;
+        // height: 900px;
         width: 100vw;
         opacity: .9;
         filter: brightness(.8);
@@ -146,13 +153,17 @@ input:focus {
         color: $clr-white;
         width: max-content;
         position: absolute;
-        top: 50%;
+        top: 40%;
         left: 50%;
         transform: translate(-50%, -50%);
+        line-height: 66px;
     }
 
     @media (max-width: 500px) {
-        height: 40vh;
+        h1 {
+            width: 350px;
+            line-height: 2rem;
+        }
 
         img {
             top: 0;
@@ -162,14 +173,48 @@ input:focus {
 }
 
 .top-card {
-    // max-width: 720px;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     margin: auto;
     margin-bottom: 4rem;
 
-    p {
-        max-width: 900px;
-        margin: auto;
+    &.eng {
+        top: 60%;
     }
+
+    h2 {
+        font-size: 3rem;
+        color: $clr-primary;
+    }
+
+    p {
+        width: 900px;
+        margin: auto;
+        color: $clr-primary1;
+        text-align: justify;
+    }
+
+    @media (max-width: 500px) {
+        h2 {
+            font-size: 1.5rem;
+        }
+
+        p {
+            width: 350px;
+            font-size: 1rem;
+            line-height: 1.1rem;
+        }
+    }
+}
+
+.scroll-down {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: auto;
 }
 
 .card-container {
@@ -177,18 +222,24 @@ input:focus {
 }
 
 .card {
+    position: relative;
     text-align: start;
     display: flex;
     flex-direction: column;
+    margin-bottom: 2.5rem;
+    padding-top: 2.5rem;
 
     .img-container {
         position: relative;
-        margin: 4rem 5rem;
+        display: flex;
+        // justify-content: center;
+        margin-top: 4rem;
         margin-bottom: 2rem;
+        margin-inline: 80px;
 
         img {
-            width: 100%;
-            max-width: 780px;
+            // width: 70%;
+            // max-width: 780px;
             max-height: 460px;
             border-radius: 1rem;
             transition-duration: 0.8s;
@@ -208,7 +259,7 @@ input:focus {
             position: absolute;
             // right: -15%;
             // left: -15%;
-            top: 85%;
+            top: 5%;
             border-radius: 1rem;
             background-color: $clr-primary;
             box-shadow: -10px 10px 20px 0px rgba(6.999999999999995, 40.00000000000005, 61, 0.30196078431372547);
@@ -221,12 +272,40 @@ input:focus {
             }
         }
 
+        .date-title {
+            font-size: 24px;
+            color: #13486975;
+            // max-width: 350px;
+            min-width: 200px;
+            padding: 1rem;
+            padding-inline-start: 3rem;
+            position: absolute;
+            // right: -15%;
+            // left: -15%;
+            top: 25%;
+
+
+            @media (max-width: 500px) {
+                font-size: 20px;
+                padding: 1rem;
+                min-width: max-content;
+            }
+        }
+
         .side-title.eng {
-            left: -15%;
+            left: -20%;
             box-shadow: 11px 3px 11px 0px rgba(6.999999999999995, 40.00000000000005, 61, 0.30196078431372547);
         }
 
         .side-title.heb {
+            right: -20%;
+        }
+
+        .date-title.eng {
+            left: -15%;
+        }
+
+        .date-title.heb {
             right: -15%;
         }
 
@@ -243,11 +322,12 @@ input:focus {
         }
     }
 
-    h4 {
-        text-align: start;
-        font-size: 1.5rem;
+    p {
+        text-align: justify;
+        line-height: 1.5rem;
+        font-size: 1.25rem;
         font-weight: lighter;
-        margin: 2rem 5rem;
+        margin: .5rem 5rem;
 
         .bold {
             font-weight: bold
@@ -265,5 +345,9 @@ input:focus {
             font-size: 1rem;
             margin: 1rem;
         }
+    }
+
+    &.last-card {
+        margin-bottom: 15rem;
     }
 }
